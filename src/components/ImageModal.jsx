@@ -152,14 +152,7 @@ const ImageModal = ({ isOpen, item, onClose }) => {
                           {reflection}
                         </div>
                       ) : (
-                        <a 
-                          href={item.document}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-lg shadow-primary/10 w-fit"
-                        >
-                          <FileText size={16} /> View Document
-                        </a>
+                        <p className="text-white/50 text-sm italic">Loading reflection...</p>
                       )}
                     </div>
                   )}
