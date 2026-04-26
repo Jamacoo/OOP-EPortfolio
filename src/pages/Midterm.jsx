@@ -48,9 +48,36 @@ const Midterm = () => {
         { 
           name: "Midterm Activity 3: ATM with Transaction Counter", 
           date: "Mar 15, 2026", 
-          image: "https://placehold.co/600x400/8b5cf6/white?text=Activity+3",
+          image: [
+            "/images/MidtermActivity3.jpg",
+            "/images/MidtermActivity3-2.jpg",
+            "/images/MidtermActivity3-3.jpg"
+          ],
           explanation: "I made a simple ATM that counts how many times you withdraw or check your balance.",
           learning: "I learned how to keep a counter running even when the user does many things in a row."
+        },
+        { 
+          name: "Midterm Activity 4: Student Payment System with Validation Counter", 
+          date: "Mar 18, 2026", 
+          image: [
+            "/images/MidtermActivity4.jpg",
+            "/images/MidtermActivity4-2.jpg",
+            "/images/MidtermActivity4-3.jpg"
+          ],
+          explanation: "I built a system for student fees that checks if the input is wrong or empty.",
+          learning: "I learned how to stop the program from crashing when a user types the wrong thing."
+        },
+        { 
+          name: "Midterm Activity 5: Personal Expense Tracker", 
+          date: "Mar 22, 2026", 
+          image: [
+            "/images/MidtermActivity5.jpg",
+            "/images/MidtermActivity5-2.jpg",
+            "/images/MidtermActivity5-3.jpg"
+          ],
+          explanation: "I made a tool to list down things I buy and how much they cost.",
+          learning: "I learned how to put many items into a list and show them all at once.",
+          document: "/docs/MidtermAvtivity1Variables.pdf"
         },
         { 
           name: "Midterm Activity 4: Student Payment System with Validation Counter", 
