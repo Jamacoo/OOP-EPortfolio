@@ -3,25 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 48%;
+  /* A softer, greyish-black theme */
+  --background: 220 15% 15%; /* Greyish black */
+  --foreground: 210 20% 90%; /* Light grey text */
+  --card: 220 15% 20%;      /* Slightly lighter card */
+  --card-foreground: 210 20% 90%;
+  --popover: 220 15% 20%;
+  --popover-foreground: 210 20% 90%;
+  --primary: 217 70% 60%;    /* Softer blue accent */
+  --primary-foreground: 220 15% 10%;
+  --secondary: 220 15% 25%;   /* Lighter grey accent */
+  --secondary-foreground: 210 20% 90%;
+  --muted: 220 15% 25%;
+  --muted-foreground: 215 10% 70%;
+  --accent: 220 15% 25%;
+  --accent-foreground: 210 20% 90%;
+  --destructive: 0 50% 50%;
+  --destructive-foreground: 210 20% 90%;
+  --border: 220 15% 30%;
+  --input: 220 15% 30%;
+  --ring: 217 70% 60%;
   --radius: 0.5rem;
 }
 
@@ -37,7 +38,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
 
