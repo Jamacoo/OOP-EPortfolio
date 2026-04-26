@@ -1,0 +1,6 @@
+In this quiz about Java, I learned about its history and memory concepts, including who created it and how it works behind the scenes. I found out that James Gosling developed Java at Sun Microsystems in 1995, and it was designed to run programs anywhere through the Java Virtual Machine. I also reviewed how Java manages memory, such as the heap for objects, the stack for method calls and local variables, and the static area for class-level data. The quiz was quite challenging because some questions required deeper understanding of how these concepts connect, but I still managed to answer a decent amount of questions correctly. Overall, it helped me realize which topics I am already comfortable with and which ones I need to review more.
+
+---
+Sample Question:
+Question: What was Java initially called?
+Answer: Oak

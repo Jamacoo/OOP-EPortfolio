@@ -15,7 +15,7 @@ const Midterm = () => {
           name: "Quiz 1: OOP Basics", 
           date: "Feb 15, 2026", 
           image: "https://placehold.co/600x400/3b82f6/white?text=Quiz+1",
-          document: "/reflections/MidtermReflections.txt"
+          document: "/reflections/Quiz1.txt"
         },
       ]
     },
@@ -27,13 +27,13 @@ const Midterm = () => {
           name: "Midterm Seatwork 1: Operators", 
           date: "Feb 28, 2026", 
           image: "https://placehold.co/600x400/10b981/white?text=Seatwork+1",
-          document: "/reflections/MidtermReflections.txt" 
+          document: "/reflections/Seatwork1.txt" 
         },
         { 
           name: "Midterm Seatwork 2: Coding in Paper", 
           date: "Mar 01, 2026", 
           image: "https://placehold.co/600x400/10b981/white?text=Seatwork+2",
-          document: "/reflections/MidtermReflections.txt" 
+          document: "/reflections/Seatwork2.txt" 
         },
       ]
     },
@@ -110,7 +110,7 @@ const Midterm = () => {
           name: "Midterm Examination", 
           date: "Apr 22, 2026", 
           image: "https://placehold.co/600x400/ef4444/white?text=Midterm+Exam",
-          document: "/reflections/MidtermReflections.txt"
+          document: "/reflections/MidtermExam.txt"
         },
       ]
     }

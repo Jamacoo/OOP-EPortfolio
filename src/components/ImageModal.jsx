@@ -6,9 +6,20 @@ const ImageModal = ({ isOpen, item, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
 
+  const [reflection, setReflection] = useState('');
+
   useEffect(() => {
     setCurrentIndex(0);
     setIsZoomed(false);
+    
+    if (item?.document && item.document.startsWith('/reflections/')) {
+      fetch(item.document)
+        .then(response => response.text())
+        .then(text => setReflection(text))
+        .catch(err => console.error("Error loading reflection:", err));
+    } else {
+      setReflection('');
+    }
   }, [item, isOpen]);
 
   if (!item) return null;
@@ -115,16 +126,7 @@ const ImageModal = ({ isOpen, item, onClose }) => {
                         <Code size={16} /> View Code
                       </a>
                     )}
-                    {item.document && (
-                      <a 
-                        href={item.document}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-lg shadow-primary/10"
-                      >
-                        <FileText size={16} /> View PDF Document
-                      </a>
-                    )}
+                    {/* Removed PDF link from header to favor the reflection area below */}
                   </div>
                 </div>
 
@@ -142,18 +144,25 @@ const ImageModal = ({ isOpen, item, onClose }) => {
                           <p className="text-white/80 text-sm leading-relaxed">{item.learning}</p>
                         </div>
                       )}
-                      {item.document && (
-                        <div className="space-y-1 md:col-span-2">
-                          <a 
-                            href={item.document}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-lg shadow-primary/10 w-fit"
-                          >
-                            <FileText size={16} /> View Reflection / Document
-                          </a>
+                  {item.document && (
+                    <div className="space-y-1 md:col-span-2 text-left">
+                      <p className="text-primary text-xs font-bold uppercase tracking-widest mb-2">Reflection</p>
+                      {reflection ? (
+                        <div className="bg-black/40 p-4 rounded-lg text-white/80 text-sm leading-relaxed whitespace-pre-wrap max-h-60 overflow-y-auto">
+                          {reflection}
                         </div>
+                      ) : (
+                        <a 
+                          href={item.document}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-lg shadow-primary/10 w-fit"
+                        >
+                          <FileText size={16} /> View Document
+                        </a>
                       )}
+                    </div>
+                  )}
                     </div>
                   )}
               </div>

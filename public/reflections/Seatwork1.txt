@@ -1,0 +1,9 @@
+I enjoyed the seatwork, especially tracking increments and figuring out the outputs of boolean expressions using both && and &. It was interesting to see how small changes in operators can affect the result, and it helped me understand OOP operations more clearly while practicing logic and code flow.
+
+---
+Sample Question:
+Task: Determine the output of the following code:
+int a = 3;
+int b = 5;
+System.out.println((a++ < b++) && (b++ > ++a));
+Output: true
