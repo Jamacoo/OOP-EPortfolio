@@ -128,22 +128,34 @@ const ImageModal = ({ isOpen, item, onClose }) => {
                   </div>
                 </div>
 
-                {(item.explanation || item.learning) && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left border-t border-white/10 pt-4 mt-2">
-                    {item.explanation && (
-                      <div className="space-y-1">
-                        <p className="text-primary text-xs font-bold uppercase tracking-widest">Explanation</p>
-                        <p className="text-white/80 text-sm leading-relaxed">{item.explanation}</p>
-                      </div>
-                    )}
-                    {item.learning && (
-                      <div className="space-y-1">
-                        <p className="text-green-400 text-xs font-bold uppercase tracking-widest">Learning</p>
-                        <p className="text-white/80 text-sm leading-relaxed">{item.learning}</p>
-                      </div>
-                    )}
-                  </div>
-                )}
+                  {(item.explanation || item.learning || item.document) && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left border-t border-white/10 pt-4 mt-2">
+                      {item.explanation && (
+                        <div className="space-y-1">
+                          <p className="text-primary text-xs font-bold uppercase tracking-widest">Explanation</p>
+                          <p className="text-white/80 text-sm leading-relaxed">{item.explanation}</p>
+                        </div>
+                      )}
+                      {item.learning && (
+                        <div className="space-y-1">
+                          <p className="text-green-400 text-xs font-bold uppercase tracking-widest">Learning</p>
+                          <p className="text-white/80 text-sm leading-relaxed">{item.learning}</p>
+                        </div>
+                      )}
+                      {item.document && (
+                        <div className="space-y-1 md:col-span-2">
+                          <a 
+                            href={item.document}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-lg shadow-primary/10 w-fit"
+                          >
+                            <FileText size={16} /> View Reflection / Document
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  )}
               </div>
             )}
           </motion.div>

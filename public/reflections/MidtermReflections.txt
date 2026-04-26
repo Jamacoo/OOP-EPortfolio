@@ -1,0 +1,11 @@
+Reflection for Seatwork 1:
+I learned how to use arithmetic operators like +, -, *, and / to perform basic calculations in Java. It was a good exercise for practicing basic logic.
+
+Reflection for Seatwork 2:
+Coding on paper helped me focus on syntax without relying on an IDE's autocomplete. It made me more mindful of semicolons, brackets, and overall code structure.
+
+Reflection for Quiz 1:
+This quiz helped me understand the foundational concepts of Object-Oriented Programming. I realized the importance of encapsulation and how it protects data. I am now more confident in designing classes that are both secure and efficient.
+
+Reflection for Midterm Exam:
+The midterm exam was a challenging test of my ability to apply OOP principles in a practical scenario. It forced me to think about code structure and reusability. I identified areas where I need to improve, particularly in handling edge cases within my methods. Overall, it was a productive assessment.

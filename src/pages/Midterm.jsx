@@ -15,7 +15,7 @@ const Midterm = () => {
           name: "Quiz 1: OOP Basics", 
           date: "Feb 15, 2026", 
           image: "https://placehold.co/600x400/3b82f6/white?text=Quiz+1",
-          document: "/reflections/Quiz1_Reflection.txt"
+          document: "/reflections/MidtermReflections.txt"
         },
       ]
     },
@@ -23,7 +23,18 @@ const Midterm = () => {
       title: "Midterm Seatwork",
       icon: <Edit3 className="text-green-500" />,
       items: [
-        { name: "Midterm Seatwork 1: Operators", date: "Feb 28, 2026", image: "https://placehold.co/600x400/10b981/white?text=Seatwork+1" },
+        { 
+          name: "Midterm Seatwork 1: Operators", 
+          date: "Feb 28, 2026", 
+          image: "https://placehold.co/600x400/10b981/white?text=Seatwork+1",
+          document: "/reflections/MidtermReflections.txt" 
+        },
+        { 
+          name: "Midterm Seatwork 2: Coding in Paper", 
+          date: "Mar 01, 2026", 
+          image: "https://placehold.co/600x400/10b981/white?text=Seatwork+2",
+          document: "/reflections/MidtermReflections.txt" 
+        },
       ]
     },
     {
@@ -33,7 +44,7 @@ const Midterm = () => {
         { 
           name: "Midterm Assignment 1: Introduction to Java", 
           date: "Mar 01, 2026", 
-          image: "https://placehold.co/600x400/8b5cf6/white?text=Assignment+1"
+          image: "/images/MidtermAssignment1.jpg"
         },
         { 
           name: "Midterm Activity 1: Variables", 
@@ -45,7 +56,7 @@ const Midterm = () => {
         },
         { 
           name: "Midterm Activity 2: Operators", 
-          date: "Mar 12, 2026", 
+          date: "Mar 03, 2026", 
           image: [
             "/images/MidtermAcitivity2.jpg",
             "/images/MidtermAcitivity2-2.jpg",
@@ -99,7 +110,7 @@ const Midterm = () => {
           name: "Midterm Examination", 
           date: "Apr 22, 2026", 
           image: "https://placehold.co/600x400/ef4444/white?text=Midterm+Exam",
-          document: "/reflections/MidtermExam_Reflection.txt"
+          document: "/reflections/MidtermReflections.txt"
         },
       ]
     }
