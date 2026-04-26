@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Edit3, Activity, Award, Image as ImageIcon } from 'lucide-react';
+import { FileText, Edit3, Activity, Award, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import ImageModal from '../components/ImageModal';
 
 const Midterm = () => {
@@ -29,9 +29,10 @@ const Midterm = () => {
         { 
           name: "Midterm Activity 1: Variables", 
           date: "Mar 05, 2026", 
-          image: "https://placehold.co/600x400/8b5cf6/white?text=Activity+1",
+          image: "/images/MidtermActivity1.jpg",
           explanation: "In this activity, I practiced making and using different kinds of variables like int and String.",
-          learning: "I learned how to pick the right kind of variable so the code runs better and doesn't waste space."
+          learning: "I learned how to pick the right kind of variable so the code runs better and doesn't waste space.",
+          document: "/docs/MidtermAvtivity1Variables.pdf"
         },
         { 
           name: "Midterm Activity 2: Operators", 
@@ -63,7 +64,8 @@ const Midterm = () => {
           date: "Mar 22, 2026", 
           image: "https://placehold.co/600x400/8b5cf6/white?text=Activity+5",
           explanation: "I made a tool to list down things I buy and how much they cost.",
-          learning: "I learned how to put many items into a list and show them all at once."
+          learning: "I learned how to put many items into a list and show them all at once.",
+          document: "/docs/ExpenseTracker_Report.pdf"
         },
       ]
     },
@@ -120,7 +122,21 @@ const Midterm = () => {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-bold group-hover:text-primary transition-colors">{item.name}</h3>
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-lg font-bold group-hover:text-primary transition-colors">{item.name}</h3>
+                    {item.document && (
+                      <a 
+                        href={item.document} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-white transition-colors"
+                        title="View Document"
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
+                  </div>
                   <p className="text-sm text-muted-foreground">{item.date}</p>
                 </div>
               </motion.div>
