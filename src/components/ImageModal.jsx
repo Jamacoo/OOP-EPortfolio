@@ -1,15 +1,13 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import ImageMagnifier from './ImageMagnifier';
 
 const ImageModal = ({ isOpen, item, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isZoomed, setIsZoomed] = useState(false);
 
-  // Reset index and zoom when modal opens with a new item
   useEffect(() => {
     setCurrentIndex(0);
-    setIsZoomed(false);
   }, [item, isOpen]);
 
   if (!item) return null;
@@ -19,19 +17,12 @@ const ImageModal = ({ isOpen, item, onClose }) => {
 
   const handleNext = (e) => {
     e.stopPropagation();
-    setIsZoomed(false);
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
   const handlePrev = (e) => {
     e.stopPropagation();
-    setIsZoomed(false);
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const toggleZoom = (e) => {
-    e.stopPropagation();
-    setIsZoomed(!isZoomed);
   };
 
   return (
@@ -42,7 +33,7 @@ const ImageModal = ({ isOpen, item, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md cursor-zoom-out"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
         >
           {/* Close Button */}
           <motion.button
@@ -77,22 +68,20 @@ const ImageModal = ({ isOpen, item, onClose }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-7xl w-full flex flex-col items-center gap-6 max-h-[95vh] overflow-auto custom-scrollbar bg-card/50 rounded-3xl"
+            className="relative max-w-7xl w-full flex flex-col items-center gap-6 max-h-[95vh] overflow-y-auto custom-scrollbar bg-card/50 rounded-3xl"
           >
-            <div className={`relative flex flex-shrink-0 items-center justify-center p-8 transition-all duration-500 ${isZoomed ? 'w-[250%] h-auto' : 'w-full h-auto'}`}>
-               <motion.img
+            <div className="relative flex flex-shrink-0 items-center justify-center p-8 w-full h-auto">
+               <motion.div
                 key={currentIndex}
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ 
-                  opacity: 1, 
-                  x: 0,
-                  scale: isZoomed ? 1 : 1
-                }}
-                src={images[currentIndex]}
-                alt={`${item.name} - ${currentIndex + 1}`}
-                onClick={toggleZoom}
-                className={`rounded-lg shadow-2xl border border-white/10 transition-all duration-300 ${isZoomed ? 'w-full cursor-zoom-out' : 'max-w-full max-h-[65vh] object-contain cursor-zoom-in'}`}
-              />
+                animate={{ opacity: 1, x: 0 }}
+                className="w-full flex justify-center"
+               >
+                 <ImageMagnifier 
+                   src={images[currentIndex]} 
+                   alt={`${item.name} - ${currentIndex + 1}`} 
+                 />
+               </motion.div>
             </div>
 
             <div className="text-center space-y-4 max-w-2xl mx-auto px-4 pb-12">
