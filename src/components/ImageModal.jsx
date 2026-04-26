@@ -77,22 +77,21 @@ const ImageModal = ({ isOpen, item, onClose }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full flex flex-col items-center gap-6 max-h-[90vh] overflow-y-auto custom-scrollbar"
+            className="relative max-w-7xl w-full flex flex-col items-center gap-6 max-h-[95vh] overflow-auto custom-scrollbar bg-card/50 rounded-3xl"
           >
-            <div className="relative group flex flex-shrink-0 items-center justify-center pt-8">
+            <div className={`relative flex flex-shrink-0 items-center justify-center p-8 transition-all duration-500 ${isZoomed ? 'w-[250%] h-auto' : 'w-full h-auto'}`}>
                <motion.img
                 key={currentIndex}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ 
                   opacity: 1, 
                   x: 0,
-                  scale: isZoomed ? 1.5 : 1
+                  scale: isZoomed ? 1 : 1
                 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 src={images[currentIndex]}
                 alt={`${item.name} - ${currentIndex + 1}`}
                 onClick={toggleZoom}
-                className={`max-w-full ${isZoomed ? 'max-h-none' : 'max-h-[60vh]'} object-contain rounded-lg shadow-2xl border border-white/10 transition-all duration-300 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+                className={`rounded-lg shadow-2xl border border-white/10 transition-all duration-300 ${isZoomed ? 'w-full cursor-zoom-out' : 'max-w-full max-h-[65vh] object-contain cursor-zoom-in'}`}
               />
             </div>
 
