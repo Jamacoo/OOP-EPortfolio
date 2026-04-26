@@ -1,16 +1,41 @@
-# React + Vite
+# OOP E-Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern, responsive e-portfolio built to showcase my progress and projects in the **Object Oriented Programming** course.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- **Modern UI:** Built with React, Tailwind CSS, and Framer Motion.
+- **Project Showcase:** Interactive gallery for quizzes, seatwork, and activities.
+- **Document Viewer:** Integrated PDF viewer for project reports.
+- **Source Code Viewer:** Quick access to Java source code for each activity.
+- **Dark Mode:** Sleek, high-contrast dark theme.
+- **Magnifying Lens:** Zoom-in feature to inspect code and details in screenshots.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide-React
 
-## React Compiler
+## 💻 How to Run Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Jamacoo/OOP-EPortfolio.git
+   ```
+2. Navigate to the folder:
+   ```bash
+   cd OOP-EPortfolio
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👤 Author
+**Jann Marco P. Gadicho**
+*Course: Object Oriented Programming*
+*Section: BSIT 2-1N*
