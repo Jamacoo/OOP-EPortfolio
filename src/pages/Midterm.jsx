@@ -141,10 +141,10 @@ const Midterm = () => {
                         target="_blank" 
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-white transition-colors"
-                        title="View Document"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all text-xs font-bold"
+                        title="View Full PDF"
                       >
-                        <ExternalLink size={16} />
+                        <FileText size={14} /> PDF
                       </a>
                     )}
                   </div>
