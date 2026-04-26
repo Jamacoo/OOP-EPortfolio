@@ -43,8 +43,7 @@ const Midterm = () => {
             "/images/MidtermAcitivity2-3.jpg"
           ],
           explanation: "I used math and logic symbols to solve different problems and equations.",
-          learning: "I learned which symbols to use first in math problems and how to use 'if' statements correctly.",
-          sourceCode: "/code/Activity2Operators.java"
+          learning: "I learned which symbols to use first in math problems and how to use 'if' statements correctly."
         },
         { 
           name: "Midterm Activity 3: ATM with Transaction Counter", 
@@ -55,7 +54,8 @@ const Midterm = () => {
             "/images/MidtermActivity3-3.jpg"
           ],
           explanation: "I made a simple ATM that counts how many times you withdraw or check your balance.",
-          learning: "I learned how to keep a counter running even when the user does many things in a row."
+          learning: "I learned how to keep a counter running even when the user does many things in a row.",
+          sourceCode: "/code/MidtermActivity3.java"
         },
         { 
           name: "Midterm Activity 4: Student Payment System with Validation Counter", 
@@ -66,7 +66,8 @@ const Midterm = () => {
             "/images/MidtermActivity4-3.jpg"
           ],
           explanation: "I built a system for student fees that checks if the input is wrong or empty.",
-          learning: "I learned how to stop the program from crashing when a user types the wrong thing."
+          learning: "I learned how to stop the program from crashing when a user types the wrong thing.",
+          sourceCode: "/code/MidtermAvtivity4.java"
         },
         { 
           name: "Midterm Activity 5: Personal Expense Tracker", 
