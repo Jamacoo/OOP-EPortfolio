@@ -11,12 +11,12 @@ const Home = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative"
+          className="flex flex-col items-center gap-4"
         >
-          <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-primary to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-xl mb-4">
+          <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-amber-400 to-orange-500 flex items-center justify-center text-white text-4xl font-bold shadow-2xl shadow-orange-500/20 border-4 border-background">
             JG
           </div>
-          <div className="absolute -bottom-2 -right-2 bg-background border border-border px-3 py-1 rounded-full text-xs font-medium shadow-sm">
+          <div className="bg-secondary text-secondary-foreground border border-border px-4 py-1.5 rounded-full text-sm font-bold tracking-wide shadow-sm">
             BSIT 2-1N
           </div>
         </motion.div>
