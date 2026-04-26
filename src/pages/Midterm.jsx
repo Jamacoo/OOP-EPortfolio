@@ -11,21 +11,30 @@ const Midterm = () => {
       title: "Midterm Quizzes",
       icon: <FileText className="text-blue-500" />,
       items: [
-        { name: "Quiz 1: OOP Basics", date: "Feb 15, 2026", image: "https://placehold.co/600x400/3b82f6/white?text=Quiz+1" },
-        { name: "Quiz 2: Classes and Objects", date: "Feb 22, 2026", image: "https://placehold.co/600x400/3b82f6/white?text=Quiz+2" },
+        { 
+          name: "Quiz 1: OOP Basics", 
+          date: "Feb 15, 2026", 
+          image: "https://placehold.co/600x400/3b82f6/white?text=Quiz+1",
+          document: "/reflections/Quiz1_Reflection.txt"
+        },
       ]
     },
     {
       title: "Midterm Seatwork",
       icon: <Edit3 className="text-green-500" />,
       items: [
-        { name: "Midterm Seatwork 1: Operators", date: "Feb 18, 2026", image: "https://placehold.co/600x400/10b981/white?text=Seatwork+1" },
+        { name: "Midterm Seatwork 1: Operators", date: "Feb 28, 2026", image: "https://placehold.co/600x400/10b981/white?text=Seatwork+1" },
       ]
     },
     {
       title: "Midterm Activities",
       icon: <Activity className="text-purple-500" />,
       items: [
+        { 
+          name: "Midterm Assignment 1: Introduction to Java", 
+          date: "Mar 01, 2026", 
+          image: "https://placehold.co/600x400/8b5cf6/white?text=Assignment+1"
+        },
         { 
           name: "Midterm Activity 1: Variables", 
           date: "Mar 05, 2026", 
@@ -47,7 +56,7 @@ const Midterm = () => {
         },
         { 
           name: "Midterm Activity 3: ATM with Transaction Counter", 
-          date: "Mar 15, 2026", 
+          date: "Mar 27, 2026", 
           image: [
             "/images/MidtermActivity3.jpg",
             "/images/MidtermActivity3-2.jpg",
@@ -59,7 +68,7 @@ const Midterm = () => {
         },
         { 
           name: "Midterm Activity 4: Student Payment System with Validation Counter", 
-          date: "Mar 18, 2026", 
+          date: "Mar 27, 2026", 
           image: [
             "/images/MidtermActivity4.jpg",
             "/images/MidtermActivity4-2.jpg",
@@ -71,7 +80,7 @@ const Midterm = () => {
         },
         { 
           name: "Midterm Activity 5: Personal Expense Tracker", 
-          date: "Mar 22, 2026", 
+          date: "Apr 12, 2026", 
           image: [
             "/images/MidtermActivity5.jpg",
             "/images/MidtermActivity5-2.jpg",
@@ -86,9 +95,15 @@ const Midterm = () => {
       title: "Midterm Exam",
       icon: <Award className="text-red-500" />,
       items: [
-        { name: "Midterm Examination", date: "Mar 20, 2026", image: "https://placehold.co/600x400/ef4444/white?text=Midterm+Exam" },
+        { 
+          name: "Midterm Examination", 
+          date: "Apr 22, 2026", 
+          image: "https://placehold.co/600x400/ef4444/white?text=Midterm+Exam",
+          document: "/reflections/MidtermExam_Reflection.txt"
+        },
       ]
     }
+
   ];
 
   return (

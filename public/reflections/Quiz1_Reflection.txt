@@ -1,0 +1,2 @@
+Reflection for Quiz 1:
+This quiz helped me understand the foundational concepts of Object-Oriented Programming. I realized the importance of encapsulation and how it protects data. I am now more confident in designing classes that are both secure and efficient.
