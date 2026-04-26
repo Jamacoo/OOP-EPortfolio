@@ -1,4 +1,4 @@
-The seatwork where we wrote code on paper using switch, if, and nested if statements was a bit challenging but fun. It made me really think through the logic since I couldn’t run the code, so I had to be careful with every condition. I enjoyed figuring out how each decision structure works, especially comparing nested if statements with switch cases.
+Coding on paper helped me focus on syntax without relying on an IDE's autocomplete. It made me more mindful of semicolons, brackets, and overall code structure.
 
 ---
 Sample Question:
