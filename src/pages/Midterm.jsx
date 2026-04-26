@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Edit3, Activity, Award, Image as ImageIcon, ExternalLink } from 'lucide-react';
+import { FileText, Edit3, Activity, Award, Image as ImageIcon, ExternalLink, Code } from 'lucide-react';
 import ImageModal from '../components/ImageModal';
 
 const Midterm = () => {
@@ -43,7 +43,8 @@ const Midterm = () => {
             "/images/MidtermAcitivity2-3.jpg"
           ],
           explanation: "I used math and logic symbols to solve different problems and equations.",
-          learning: "I learned which symbols to use first in math problems and how to use 'if' statements correctly."
+          learning: "I learned which symbols to use first in math problems and how to use 'if' statements correctly.",
+          sourceCode: "/code/Activity2Operators.java"
         },
         { 
           name: "Midterm Activity 3: ATM with Transaction Counter", 
@@ -135,18 +136,32 @@ const Midterm = () => {
                 <div className="p-5">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-lg font-bold group-hover:text-primary transition-colors">{item.name}</h3>
-                    {item.document && (
-                      <a 
-                        href={item.document} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all text-xs font-bold"
-                        title="View Full PDF"
-                      >
-                        <FileText size={14} /> PDF
-                      </a>
-                    )}
+                    <div className="flex gap-2">
+                      {item.sourceCode && (
+                        <a 
+                          href={item.sourceCode} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/10 text-green-500 border border-green-500/20 hover:bg-green-500 hover:text-white transition-all text-xs font-bold"
+                          title="View Source Code"
+                        >
+                          <Code size={14} /> Code
+                        </a>
+                      )}
+                      {item.document && (
+                        <a 
+                          href={item.document} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all text-xs font-bold"
+                          title="View Full PDF"
+                        >
+                          <FileText size={14} /> PDF
+                        </a>
+                      )}
+                    </div>
                   </div>
                   <p className="text-sm text-muted-foreground">{item.date}</p>
                 </div>
