@@ -12,7 +12,7 @@ const ImageModal = ({ isOpen, item, onClose }) => {
     setCurrentIndex(0);
     setIsZoomed(false);
     
-    if (item?.document && item.document.startsWith('/reflections/')) {
+    if (item?.document) {
       fetch(item.document)
         .then(response => response.text())
         .then(text => setReflection(text))
