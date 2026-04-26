@@ -68,20 +68,20 @@ const ImageModal = ({ isOpen, item, onClose }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full flex flex-col items-center gap-6"
+            className="relative max-w-5xl w-full flex flex-col items-center gap-6 max-h-[90vh] overflow-y-auto custom-scrollbar"
           >
-            <div className="relative group flex items-center justify-center">
+            <div className="relative group flex flex-shrink-0 items-center justify-center pt-8">
                <motion.img
                 key={currentIndex}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 src={images[currentIndex]}
                 alt={`${item.name} - ${currentIndex + 1}`}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
+                className="max-w-full max-h-[60vh] object-contain rounded-lg shadow-2xl border border-white/10"
               />
             </div>
 
-            <div className="text-center space-y-4 max-w-2xl mx-auto px-4 pb-8">
+            <div className="text-center space-y-4 max-w-2xl mx-auto px-4 pb-12">
               <div className="space-y-1">
                 <h3 className="text-white text-xl font-bold">{item.name}</h3>
                 <p className="text-white/50 text-sm">{item.date}</p>
