@@ -114,8 +114,6 @@ const Midterm = () => {
         },
       ]
     },
-      ]
-    },
     {
       title: "Midterm Seatwork",
       icon: <Edit3 className="text-green-500" />,
