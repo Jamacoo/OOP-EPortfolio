@@ -130,38 +130,3 @@ const ImageModal = ({ isOpen, item, onClose }) => {
 };
 
 export default ImageModal;
-              <div className="space-y-1">
-                <h3 className="text-white text-xl font-bold">{item.name}</h3>
-                <p className="text-white/50 text-sm">{item.date}</p>
-                {hasMultiple && (
-                  <p className="text-primary font-medium text-sm pt-1">
-                    Image {currentIndex + 1} of {images.length}
-                  </p>
-                )}
-              </div>
-
-              {(item.explanation || item.learning) && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left border-t border-white/10 pt-4 mt-2">
-                  {item.explanation && (
-                    <div className="space-y-1">
-                      <p className="text-primary text-xs font-bold uppercase tracking-widest">Explanation</p>
-                      <p className="text-white/80 text-sm leading-relaxed">{item.explanation}</p>
-                    </div>
-                  )}
-                  {item.learning && (
-                    <div className="space-y-1">
-                      <p className="text-green-400 text-xs font-bold uppercase tracking-widest">Learning</p>
-                      <p className="text-white/80 text-sm leading-relaxed">{item.learning}</p>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
-
-export default ImageModal;
